@@ -8,6 +8,7 @@ export class TreatmentService {
 
   async create(createTreatmentDto: CreateTreatmentDto) {
     try {
+      // process the data
       return this.prisma.treatmentRecord.create({
         data: {
           patientName: createTreatmentDto.patientName,
